@@ -9,6 +9,10 @@ function App() {
   const [isPhone, setIsPhone] = useState(false)
 
   useEffect(() => {
+    window.addEventListener('load', () => {
+      setIsOkay(window.innerWidth <= 1024)
+      setIsPhone(window.innerWidth <= 480)
+    })
     window.addEventListener('DOMContentLoaded', () => {
       setIsOkay(window.innerWidth <= 1024)
       setIsPhone(window.innerWidth <= 480)
@@ -20,6 +24,10 @@ function App() {
 
     return () => {
       window.removeEventListener('resize', () => {
+        setIsOkay(window.innerWidth <= 1024)
+        setIsPhone(window.innerWidth <= 480)
+      })
+      window.removeEventListener('load', () => {
         setIsOkay(window.innerWidth <= 1024)
         setIsPhone(window.innerWidth <= 480)
       })
