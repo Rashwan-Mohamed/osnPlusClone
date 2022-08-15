@@ -8,6 +8,7 @@
 }
 #root {
   overflow-x: hidden;
+  background-color: var(--primary);
 }
 * {
   margin: 0;
@@ -1315,7 +1316,7 @@ z-index: 0;
     max-width: 100vw;
   }
   .behold {
-    height: 100%;
+    height: unset;
   }
 
   header {
@@ -1902,6 +1903,6 @@ z-index: 0;
     grid-column: 2/3;
   }
   .behold {
-    height: 70vh !important;
+    height: unset;
   }
 }
