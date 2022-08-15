@@ -134,7 +134,7 @@ nav button {
 }
 
 header {
-  background-color: var(--primary);
+  background-color: var(--primary) !important;
   height: 100vh;
   display: flex;
   flex-direction: column;
